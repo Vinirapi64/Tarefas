@@ -103,37 +103,39 @@ class Atividade:
                     
                         
 
-atividade = Atividade()
+def menu():
+    atividade = Atividade()
 
-opcoes_menu = ['1. Criar tarefa', '2. Historico de tarefas', '3. redefinir status', '4. Procurar tarefa', '5. Remover tarefa', '6. Encerrar']
+    opcoes_menu = ['1. Criar tarefa', '2. Historico de tarefas', '3. redefinir status', '4. Procurar tarefa', '5. Remover tarefa', '6. Encerrar']
 
-while True:
-    print("Menu opções:")
-    for i in opcoes_menu:
-        print(i)
+    while True:
+        print("Menu opções:")
+        for i in opcoes_menu:
+            print(i)
 
-    try:
-        menu = int(input("Selecione uma das opções: "))
-        
-        if menu == 1:
-            atividade.criarTarefa()
-        elif menu == 2:
-            atividade.listarHistorico()
-        elif menu == 3:
-            atividade.redefinirStatus()
-        elif menu == 4:
-            atividade.procurarTarefa()
-        elif menu == 5:
-            atividade.excluirTarefa()
-        elif menu == 6:
-            print('Sistema encerrado!')
-            break
-        else:
-            print("Opção inválida! Escolha um número entre 1 e 6.")
+        try:
+            menu = int(input("Selecione uma das opções: "))
+            
+            if menu == 1:
+                atividade.criarTarefa()
+            elif menu == 2:
+                atividade.listarHistorico()
+            elif menu == 3:
+                atividade.redefinirStatus()
+            elif menu == 4:
+                atividade.procurarTarefa()
+            elif menu == 5:
+                atividade.excluirTarefa()
+            elif menu == 6:
+                print('Sistema encerrado!')
+                break
+            else:
+                print("Opção inválida! Escolha um número entre 1 e 6.")
 
-    except ValueError:
-        print("Entrada inválida! Digite um número correspondente ao menu.")
+        except ValueError:
+            print("Entrada inválida! Digite um número correspondente ao menu.")
 
-        
-        
+if __name__ == "__main__":
+    menu()
+            
         
